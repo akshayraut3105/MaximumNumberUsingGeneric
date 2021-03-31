@@ -1,61 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace MaxString
+
+namespace MaxMoreThan3Parameter
 {
     class Program
     {
-        public static int MaximumIntegerNumber(int first, int second, int third)
-        {
-            if (first > second && first > third)
-                return first;
-            else if (second > first && second > third)
-                return second;
-            else if (third > first && third > second)
-                return third;
-            else
-                return first;
-        }
-
-        public static double MaximumDoubleNumber(double first, double second, double third)
-        {
-            if (first > second && first > third)
-                return first;
-            else if (second > first && second > third)
-                return second;
-            else if (third > first && third > second)
-                return third;
-            else
-                return first;
-        }
-
-        public static string MaximumStringNumber(string first, string second, string third)
-        {
-            if (first.Length > second.Length && first.Length > third.Length)
-                return first;
-            else if (second.Length > first.Length && second.Length > third.Length)
-                return second;
-            else if (third.Length > first.Length && third.Length > second.Length)
-                return third;
-            else
-                return first;
-        }
-
         static void Main(string[] args)
         {
-            int[] integer = { 3, 2, 0 };
+            //SortedList<int,int> integer = new SortedList<int,int>();
+            int[] integer = new int[] { 5, 2, 20, 15, 60, 85, 61, 66, 5 };
+            //MaximumNumber<int> maxInt = new MaximumNumber<int>();
             Console.WriteLine("MAXIMUM INTEGER");
-            Console.WriteLine(MaximumIntegerNumber(integer[0], integer[1], integer[2]));
+            Console.WriteLine(MaximumNumber<int>.MaxNum(integer));
             Console.WriteLine("-----------------");
-            double[] floatNumber = { 3.1, 22.5, 0.2 };
+            //SortedList<int, double> doubleNummber = new SortedList<int, double>();
+            double[] doubleNumber = new double[] { 7.1, 6.5, 7.55, 83.5, 9.542, 8.888 };
+            //MaximumNumber<double> maxDouble = new MaximumNumber<double>();
             Console.WriteLine("MAXIMUM DECIMAL");
-            Console.WriteLine(MaximumDoubleNumber(floatNumber[0], floatNumber[1], floatNumber[2]));
+            Console.WriteLine(MaximumNumber<double>.MaxNum(doubleNumber));
             Console.WriteLine("-----------------");
-            string[] stringNumber = { "Apple", "Peach", "Banana" };
+            string[] stringNumber = new string[] { "7.7", "65", "755", "25", "9000" };
+            //MaximumNumber<string> maxString = new MaximumNumber<string>();
             Console.WriteLine("MAXIMUM STRING");
-            Console.WriteLine(MaximumStringNumber(stringNumber[0], stringNumber[1], stringNumber[2]));
+            Console.WriteLine(MaximumNumber<string>.MaxNum(stringNumber));
             Console.WriteLine("-----------------");
 
             Console.ReadKey();
