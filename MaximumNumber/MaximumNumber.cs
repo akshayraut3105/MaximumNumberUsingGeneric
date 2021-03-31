@@ -1,15 +1,9 @@
-﻿
-using System;
+﻿using System;
 
-
-namespace MaxMoreThan3Parameter
+namespace MaxValuePrint
 {
     internal class MaximumNumber<T> where T : IComparable
     {
-        public MaximumNumber()
-        {
-
-        }
         public static T MaxNum(T[] array)
         {
             T temp;
@@ -31,4 +25,5 @@ namespace MaxMoreThan3Parameter
             return array[array.Length - 1];
         }
     }
+
 }
